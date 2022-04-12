@@ -1,0 +1,52 @@
+.callback-modal {
+    width: 97vw;
+    height: 90vh;
+    max-width: 375px;
+    min-width: 300px;
+    max-height: 515px;
+    padding: 32px 20px;
+    overflow: auto;
+    @include to-tablet {
+        padding: 60px 40px;
+        max-height: 580px;
+        max-width: 470px;
+    }
+    @include to-desktop {
+        padding: 90px;
+        max-height: 665px;
+        max-width: 686px;
+    }
+}
+.intopModal-callback .arcticmodal-close {
+    top: 16px;
+    right: 16px;
+    @include to-tablet {
+        top: 22px;
+        right: 22px;
+    }
+    @include to-desktop {
+        top: 28px;
+        right: 28px;
+    }
+}
+.callback-modal__wrap {
+    max-width: 358px;
+    margin: 0 auto;
+}
+.callback-modal__title {
+    margin-bottom: 20px;
+    text-align: left;
+    @include to-tablet {
+        margin-bottom: 26px;
+        text-align: center;
+    }
+    @include to-desktop {
+        margin-bottom: 32px;
+    }
+}
+.callback-modal__form {
+    width: 100%;
+}
+.callback-modal__form .form-btn {
+    width: 100%;
+}

@@ -1,0 +1,25 @@
+.header {
+    &__line {
+        display: none;
+        @include from-tablet {
+            display: block;
+            position: fixed;
+            height: 40px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 200;
+            color: var(--font-2);
+            background: var(--bg-5);
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &__phone {
+        font-weight: var(--font-weight-bold);
+    }
+}

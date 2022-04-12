@@ -1,0 +1,109 @@
+.payment-title__section {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+    @include to-tablet {
+        margin-bottom: 36px;
+    }
+    @include from-tablet {
+        text-align: center
+    }
+    @include to-desktop {
+        margin-bottom: 40px;
+    }
+}
+.payment-slider {
+    position: relative;
+    z-index: 2;
+}
+.payment__swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: var(--bg-4);
+}
+.payment__image {
+    height: 90vw;
+    min-height: 288px;
+    @include to-tablet {
+        height: 45vw;
+        min-height: auto;
+    }
+    @include from-tablet {
+        height: 29vw;
+    }
+    @include to-desktop {
+        height: 22.3vw;
+        max-height: 288px;
+    }
+}
+.payment__swiper-slide-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    @include to-tablet {
+        padding: 18px;
+    }
+    @include to-desktop {
+        padding: 20px;
+    }
+}
+.payment__item-title {
+    margin-bottom: 8px;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--title-line-height);
+    color: var(--font-4);
+    @include to-tablet {
+        margin-bottom: 6px;
+        font-size: var(--font-size-medium-semi);
+    }
+    @include to-desktop {
+        margin-bottom: 4px;
+        font-size: var(--font-size-medium-maxi);
+    }
+}
+.payment__item-text {
+    flex: 1;
+    margin-bottom: 16px;
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--font-1);
+}
+.payment__swiper.swiper {
+    overflow: initial;
+}
+.payment__circle1 {
+    display: none;
+    @include from-tablet {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 3%;
+        left: 8%;
+        transform: translate(-50%, -50%);
+        @include to-desktop {
+            top: 22%;
+            left: -2%;
+        }
+        &-icon {
+            width: 159px;
+            height: 159px;
+        }
+    }
+}
+.payment__circle2 {
+    display: none;
+    @include from-tablet {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 22%;
+        right: -26%;
+        transform: translate(-50%, -50%);
+        &-icon {
+            width: 343px;
+            height: 343px;
+        }
+    }
+}

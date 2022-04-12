@@ -1,0 +1,78 @@
+.swiper-pagination-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    opacity: 1;
+    & + & {
+        margin-left: 8px;
+    }
+}
+.swiper-pagination-bullet-active .swiper-pagination-bullet-circle {
+    background-color: transparent;
+}
+.swiper-pagination-bullet-circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+.slider-pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+//----- pagination -------------------
+.pagination-blue .swiper-pagination-bullet-active {
+    background-color: var(--btn-4);
+}
+.pagination-blue .swiper-pagination-bullet-circle {
+    background-color: var(--btn-6);
+}
+.pagination-white .swiper-pagination-bullet-active {
+    background-color: var(--btn-2);
+}
+.pagination-white .swiper-pagination-bullet-circle {
+    background-color: var(--btn-2);
+    opacity: .5;
+}
+
+//----- nav-button -------------------
+.slider-nav__btn {
+    display: none;
+    @include from-tablet {
+        display: block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background-color: var(--bg-1);
+        border: 2px solid var(--btn-4);
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: initial;
+        transition: background-color .3s ease;
+    }
+}
+.slider-nav__btn:hover {
+    @include to-desktop {
+        background-color: var(--btn-2);
+    }
+}
+.slider-nav__btn-icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+.slider-nav {
+    width: 100%;
+    max-width: 648px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,55 @@
+@mixin to-width($max-width) {
+    @media (max-width: $max-width) {
+        @content;
+    }
+}
+@mixin from-width($min-width) {
+    @if $min-width == 0 {
+        @content;
+    } @else {
+        @media (min-width: $min-width) {
+            @content;
+        }
+    }
+}
+// to 321
+@mixin to-mobile {
+    @media (min-width: $mobile-min-width) {
+        @content;
+    }
+}
+// to 420
+@mixin from-mobile {
+    @media (min-width: $mobile-max-width) {
+        @content;
+    }
+}
+// to 568
+@mixin to-tablet {
+    @media (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+// to 768
+@mixin from-tablet {
+    @media (min-width: $tablet-max-width) {
+        @content;
+    }
+}
+// to 1024
+@mixin to-desktop {
+    @media (min-width: $desktop-min-width) {
+        @content;
+    }
+}
+// to 1264
+@mixin from-desktop {
+    @media (min-width: $desktop-max-width) {
+        @content;
+    }
+}
+@mixin to-retina {
+    @media (min-width: $html-max-width) {
+        @content;
+    }
+}

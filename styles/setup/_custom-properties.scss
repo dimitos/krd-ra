@@ -1,0 +1,55 @@
+:root {
+    /* ---------- Sizes ---------- */
+    --html-min-width: 321px;
+    --html-max-width: 1920px;
+    --html-mobile-edge-offset: 20px;
+    --container: 1264px;
+
+    /* ---------- Colors ---------- */
+    --font-1: #252424;
+    --font-2: #ffffff;
+    --font-3: #787878;
+    --font-4: #1c3a6d;
+    --font-5: #21478d;
+    --font-6: #d00000;
+
+    --bg-1: #eaf4fe;
+    --bg-2: #deecfc;
+    --bg-3: #1c3a6d;
+    --bg-4: #ffffff;
+    --bg-5: #289ae9;
+    --bg-6: #ace2f1;
+    --bg-7: #abd0e9;
+    --bg-8: #21478d;
+    --bg-9: #0582d8;
+
+    --btn-1: #1c3a6d;
+    --btn-2: #ffffff;
+    --btn-3: transparent;
+    --btn-4: #21478d;
+    --btn-5: #193571;
+    --btn-6: #252424;
+    --btn-7: #289ae9;
+    --btn-8: #0582d8;
+
+    --border-1: #21478d;
+
+    /* ---------- Typography ---------- */
+    --font-family-1: "Nunito", sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-small-maxi: 12px;
+    --font-size-medium-mini: 14px;
+    --font-size-medium: 16px;
+    --font-size-medium-semi: 18px;
+    --font-size-medium-maxi: 20px;
+    --font-size-big-semi: 30px;
+
+    --font-size-huge: 40px;
+
+    --title-line-height: 140%;
+    --text-line-height: 140%;
+}

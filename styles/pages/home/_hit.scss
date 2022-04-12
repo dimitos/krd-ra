@@ -1,0 +1,221 @@
+.hit {
+    position: relative;
+    z-index: 2;
+    padding: 32px 0 40px;
+    overflow: hidden;
+    @include to-tablet {
+        padding: 48px 0 50px;
+    }
+    @include to-desktop {
+        padding: 64px 0 60px;
+    }
+}
+.hit__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    z-index: 0;
+    @include to-tablet {
+        flex-direction: row;
+    }
+}
+.hit__left {
+    z-index: 3;
+    margin-top: 16px;
+    @include to-tablet {
+        position: relative;
+    z-index: 2;
+        width: 52%;
+        padding-right: 20px;
+    }
+    @include from-tablet {
+        width: 55%;
+        padding-right: 22px;
+    }
+    @include to-desktop {
+        width: 47.7%;
+        padding-right: 66px;
+    }
+    @include from-desktop {
+        padding-right: 13%;
+    }
+}
+.hit__right {
+    position: relative;
+    margin-top: 72px;
+    @include to-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+        padding-left: 10px;
+        margin: 0;
+    }
+    @include from-tablet {
+        padding-left: 30px;
+    }
+    @include to-desktop {
+        padding-left: 0;
+    }
+}
+.hit-title__section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include to-tablet {
+        position: static;
+        margin-bottom: 26px;
+    }
+    @include to-desktop {
+        margin-bottom: 28px;
+    }
+}
+.hit__list {
+    margin-bottom: 8px;
+    @include to-tablet {
+        margin-bottom: 16px;
+    }
+    @include to-desktop {
+        margin-bottom: 24px;
+    }
+}
+.hit__data {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+    line-height: var(--text-line-height);
+    color: var(--font-2);
+    @include to-tablet {
+        font-size: var(--font-size-medium-semi);
+    }
+    @include to-desktop {
+        font-size: var(--font-size-medium-maxi);
+    }
+    & + & {
+        margin-top: 4px;
+    }
+}
+.hit__text {
+    margin-bottom: 24px;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-medium);
+    line-height: var(--text-line-height);
+    color: var(--font-2);
+}
+.hit__form .input__fields-item-text {
+    color: var(--font-2);
+}
+.hit__right-wrap {
+    position: relative;
+    z-index: 1;
+    height: 88vw;
+    min-height: 281px;
+    max-height: 100%;
+    padding: 12px 10px 10px;
+    background-color: var(--bg-4);
+    @include to-tablet {
+        height: 48vw;
+        padding: 20px;
+    }
+    @include to-desktop {
+        height: 495px;
+    }
+}
+.hit__right-info {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 5;
+    padding: 10px 16px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small-maxi);
+    line-height: var(--font-size-small-maxi);
+    background-color: var(--bg-8);
+    color: var(--font-2);
+    @include to-tablet {
+        top: -13px;
+        left: -21px;
+        padding: 10px 20px;
+        font-size: var(--font-size-medium-mini);
+        line-height: var(--font-size-medium-mini);
+    }
+    @include to-desktop {
+        top: 22px;
+        left: -51px;
+        padding: 15px 35px;
+        font-size: var(--font-size-medium);
+        line-height: var(--font-size-medium);
+        text-transform: uppercase;
+    }
+}
+.hit__image {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+.hit__right-net {
+    display: none;
+    @include to-tablet {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: 988px;
+        height: 415px;
+    }
+}
+.hit__right-net-icon {
+    width: 100%;
+    height: 100%;
+}
+.hit__form .form-btn {
+    width: 100%;
+    @include from-mobile {
+        width: auto;
+        max-width: 100%;
+    }
+}
+.hit__form .input {
+    width: 100%;
+    @include from-mobile {
+        width: 274px;
+    }
+    @include to-tablet {
+        width: 100%;
+    }
+}
+.hit__circle1 {
+    position: absolute;
+    top: 0;
+    right: -52%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    &-icon {
+        width: 196px;
+        height: 147px;
+    }
+    @include from-mobile {
+        right: -34%;
+    }
+    @include to-tablet {
+        display: none;
+    }
+}
+.hit__circle2 {
+    position: absolute;
+    bottom: 2%;
+    right: -54%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    &-icon {
+        width: 212px;
+        height: 147px;
+    }
+    @include from-mobile {
+        right: -32%;
+    }
+    @include to-tablet {
+        display: none;
+    }
+}

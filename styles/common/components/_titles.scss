@@ -1,0 +1,13 @@
+.title__section {
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-medium-maxi);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--title-line-height);
+    color: var(--font-4);
+    @include to-tablet {
+        font-size: var(--font-size-big-semi);
+    }
+    @include to-desktop {
+        font-size: var(--font-size-huge);
+    }
+}

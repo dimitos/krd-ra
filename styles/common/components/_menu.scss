@@ -1,0 +1,227 @@
+.menu {
+    position: fixed;
+    height: 72px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background: var(--bg-5);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+    @include from-tablet {
+        top: 40px;
+        background: var(--bg-1);
+    }
+    @include to-desktop {
+        height: 93px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &__phone {
+        font-weight: var(--font-weight-bold);
+    }
+}
+.menu-mobile {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100vw;
+    min-width: 320px;
+    background-color: var(--bg-1);
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    @include to-desktop {
+        display: block !important;
+        position: static;
+        top: 72px;
+        left: 0;
+        width: auto;
+        max-width: none;
+        min-width: auto;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: initial;
+    }
+}
+.menu-mobile__wrap {
+    width: 100%;
+    padding: 32px 20px 80px;
+    @include to-desktop {
+        width: auto;
+        padding: 0;
+    }
+}
+.menu__nav {
+    @include to-desktop {
+        width: 56%;
+        min-width: 650px;
+    }
+}
+.menu-mobile__inner {
+    margin-top: 46px;
+    @include to-desktop {
+        display: none;
+        margin: 0;
+    }
+}
+.menu-mobile__text {
+    margin-bottom: 4px;
+    font-weight: var(--font-weight-normal);
+    color: var(--font-4);
+}
+.menu-mobile__phone {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: var(--font-weight-bold);
+    color: var(--font-4);
+}
+.menu__list {
+    @include to-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.menu__item {
+    & + & {
+        margin-top: 24px;
+        @include to-desktop {
+            margin: 0;
+        }
+    }
+}
+.menu__item-link {
+    position: relative;
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--font-4);
+}
+.menu__item-link::before {
+    @include to-desktop {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 0;
+        bottom: -20px;
+        left: 50%;
+        background-color: var(--bg-5);
+        border-radius: 3px;
+        transform: translateX(-50%);
+        transition: width .3s ease;
+    }
+}
+.menu__item:hover .menu__item-link::before {
+    @include to-desktop {
+        width: 110%;
+    }
+}
+.menu-mobile__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-right: -13px;
+        cursor: pointer;
+    @include to-desktop {
+        display: none;
+    }
+}
+.menu-mobile__closer {
+    position: relative;
+    width: 14px;
+    height: 12px;
+    border: none;
+    pointer-events: none;
+}
+.menu-mobile__closer span {
+    position: absolute;
+    right: 0;
+    height: 2px;
+    width: 14px;
+    background: var(--bg-4);
+    border-radius: 5px;
+    transition: all .3s ease;
+    @include from-tablet {
+        background: var(--bg-3);
+    }
+}
+.menu-mobile__closer span:nth-child(1) {
+    top: 0;
+}
+.menu-mobile__closer span:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.menu-mobile__closer span:nth-child(3) {
+    bottom: 0;
+}
+.menu-mobile__btn.active span:nth-child(1) {
+    width: 17px;
+    top: 5px;
+    right: -2px;
+    transform: rotate(45deg);
+}
+.menu-mobile__btn.active span:nth-child(2) {
+    width: 20px;
+    transform: translateX(50px);
+    opacity: 0;
+}
+.menu-mobile__btn.active span:nth-child(3) {
+    width: 17px;
+    bottom: -1px;
+    right: -5px;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+.menu .logo {
+    display: flex;
+    align-items: center;
+}
+.menu .logo__icon {
+    width: 108px;
+    height: 35px;
+    fill: var(--bg-4);
+    @include from-tablet {
+        fill: var(--bg-8);
+    }
+    @include to-desktop {
+        width: 137px;
+        height: 45px;
+    }
+}
+.menu .logo__link {
+    display: flex;
+}
+.menu .logo__line {
+    width: 2px;
+    height: 35px;
+    margin: 0 13px;
+    border-radius: 5px;
+    background-color: var(--bg-4);
+    @include from-tablet {
+        background-color: var(--bg-8);
+    }
+    @include to-desktop {
+        height: 45px;
+        margin: 0 16px;
+    }
+}
+.menu .logo__text {
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-small-maxi);
+    line-height: var(--title-line-height);
+    color: var(--bg-4);
+    @include from-tablet {
+        color: var(--bg-8);
+    }
+    @include to-desktop {
+        font-size: var(--font-size-medium);
+    }
+}

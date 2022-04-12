@@ -1,0 +1,125 @@
+.input-default {
+    width: 100%;
+    padding: 15px 20px;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-medium);
+    line-height: 140%;
+    background-color: #FFFFFF;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.input__fields {
+    margin-bottom: 32px;
+    @include to-tablet {
+        margin-bottom: 40px;
+    }
+    @include to-desktop {
+        margin-bottom: 48px;
+    }
+}
+.input__fields-item:not(.no-active) {
+    & + & {
+        margin-top: 16px;
+        @include to-tablet {
+            margin-top: 20px;
+        }
+        @include to-desktop {
+            margin-top: 24px;
+        }
+    }
+}
+.input__fields-item-text {
+    margin-bottom: 8px;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--text-line-height);
+    color: var(--font-4);
+}
+.input__check {
+    margin-top: 24px;
+}
+.input.input-error {
+    border-color: var(--font-6) !important;
+}
+//----------------------------------------
+// bg-border-text
+.input__white-white-black {
+    background-color: var(--bg-4);
+    border-color: var(--bg-4);
+    color: var(--font-1);
+    &::placeholder {
+        color: var(--font-1);
+    }
+    &:focus {
+        border-color: var(--bg-3);
+    }
+}
+.input__blue-blue-white {
+    background-color: var(--bg-9);
+    border-color: var(--bg-9);
+    color: var(--font-2);
+    &::placeholder {
+        color: var(--font-2);
+    }
+    &:focus {
+        border-color: var(--bg-9);
+    }
+}
+//--------  checkbox  --------------------------------
+.input__check-text {
+    padding-left: 32px;
+    font-size: var(--font-size-medium-mini);
+    color: var(--font-5);
+    & span {
+        font-weight: var(--font-weight-bold) ;
+    }
+    & span[data-modal="privacy"] {
+        cursor: pointer;
+    }
+}
+.input__agreement {
+    position: relative;
+    display: block;
+    user-select: none;
+}
+.input__checkbox {
+    display: none;
+}
+.input__agreement::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--bg-8);
+    border-radius: 4px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.input-error ~ .input__agreement::before {
+    border-color: var(--font-6) !important;
+}
+.input__agreement::after {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 12px;
+    height: 7px;
+    content: '';
+    transition: all .3s ease;
+    transform: rotate(-45deg);
+    opacity: 0;
+    border-bottom: 2px solid var(--bg-8);
+    border-left: 2px solid var(--bg-8);
+    pointer-events: none;
+}
+.input__agreement:hover::before {
+    background-color: var(--bg-7);
+}
+.input__checkbox:checked + .input__agreement::before {
+    border-color: var(--bg-8);
+}
+.input__checkbox:checked + .input__agreement::after {
+    opacity: 1;
+}

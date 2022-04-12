@@ -1,0 +1,141 @@
+.anim-section-hide {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.anim-section-hide.active {
+    opacity: 1;
+}
+.anim-net-shift-right {
+    transform: translate(100%, -50%) !important;
+    transition: transform .6s ease-out;
+}
+.anim-net-shift-right.active {
+    transform: translate(0, -50%) !important;
+}
+.anim-net-hide {
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+.anim-net-hide.active {
+    opacity: 1;
+}
+.anim-foto-hide-right {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity .6s ease .5s, transform .6s ease .5s;
+}
+.anim-foto-hide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-foto-hide-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity .6s ease .5s, transform .6s ease .5s;
+}
+.anim-foto-hide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-foto-hide {
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+.anim-foto-hide.active {
+    opacity: 1;
+}
+.anim-block-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity .6s ease-out 0.2s, transform .6s ease-out 0.2s;
+}
+.anim-block-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-text-hide-right {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity .5s ease .2s, transform .5s ease .2s;
+}
+.anim-text-hide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-text-hide-left {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity .5s ease .2s, transform .5s ease .2s;
+}
+.anim-text-hide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.anim-title-hide-up {
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: opacity .4s ease .6s, transform .4s ease .6s;
+}
+.anim-title-hide-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.anim-die-list-up.list__right-list {
+    opacity: 0;
+    transition: opacity .4s ease .6s, transform .6s ease .6s;
+    transform: rotate(180deg);
+    @include from-tablet {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
+.anim-die-list-up.list__right-list.active {
+    opacity: 1;
+    transform-origin: center center;
+    transform: rotate(0);
+    @include from-tablet {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+}
+.anim-foto-list-hide-right {
+        opacity: 0;
+        transition: opacity .6s ease .5s, transform .6s ease .5s;
+    @include from-tablet {
+        transform: translate(50%, -50%) !important;
+    }
+}
+.anim-foto-list-hide-right.active {
+    opacity: 1;
+    @include from-tablet {
+        transform: translate(0, -50%) !important;
+    }
+}
+.anim-about .about__item-line::before {
+    width: 0;
+    transition: width .7s ease .1s;
+}
+.anim-about .about__item-line::after {
+    left: 12px;
+    opacity: 0;
+    transition: opacity .3s ease, left .5s ease .2s;
+}
+.anim-about.active .about__item-line::before {
+    width: 100%;
+}
+.anim-about.active .about__item-line::after {
+    left: 30px;
+    opacity: 1;
+}
+.anim-about .about__item-title {
+    transform: translate(0, -700%);
+    transition: opacity .6s ease .3s, transform .7s ease .6s;
+}
+.anim-about.active .about__item-title {
+    transform: translate(0, 0);
+}
+.anim-about .about__item-text {
+    transform: translate(0, -700%);
+    transition: opacity .6s ease .3s, transform .4s ease .6s;
+}
+.anim-about.active .about__item-text {
+    transform: translate(0, 0);
+}
